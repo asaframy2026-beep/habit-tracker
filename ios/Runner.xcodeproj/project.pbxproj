@@ -1,0 +1,2 @@
+// Placeholder for iOS Xcode project file
+// This ensures the iOS directory structure exists.

@@ -1,0 +1,8 @@
+// Placeholder for Android build configuration
+// A real Flutter project requires much more configuration generated via `flutter create`
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
