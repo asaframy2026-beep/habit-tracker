@@ -1,4 +1,4 @@
-name: Build Mobile APK & Windows EXE
+name: Build Mobile APK
 
 on:
   push:
@@ -35,30 +35,3 @@ jobs:
         with:
           name: app-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-
-  build-exe:
-    name: Build Windows EXE
-    runs-on: windows-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-
-      - name: Enable Windows Desktop
-        run: flutter config --enable-windows-desktop
-
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Build Windows EXE
-        run: flutter build windows --release
-
-      - name: Upload Windows EXE Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-windows-exe
-          path: build/windows/x64/runner/Release/
