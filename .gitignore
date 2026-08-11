@@ -1,0 +1,6 @@
+*.zip
+.idea/
+.vscode/
+build/
+.dart_tool/
+.packages
